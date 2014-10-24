@@ -2,7 +2,7 @@
 
 Minimalistic light theme for interface components.
 A quick preview below:
-###### (Coming soon)
+![A screenshot of this theme](http://i.imgur.com/9ej91PN.png?1)
 
 ## Installation
 * Clone this repository
