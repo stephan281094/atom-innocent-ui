@@ -1,7 +1,7 @@
 @import "ui-variables";
-@tab-color-primary: #c00;
-@tab-color-modified: #d2691e;
 @tab-height: 30px;
+@tab-transition: .1s;
+@tab-space: 24px;
 
 .tab-bar {
     height: @tab-height;
@@ -10,18 +10,47 @@
 
     .tab {
         position: relative;
+        padding-left: @tab-space !important;
         max-width: 160px;
         height: @tab-height;
         line-height: @tab-height;
         color: #333;
 
-        transition: .2s;
+        transition: @tab-transition;
+
+        .title {
+            position: relative;
+            text-align: center;
+            padding: 0 !important;
+            z-index: 1;
+        }
 
         .close-icon {
-            right: 0;
+            top: 0 !important;
+            right: 0 !important;
+            height: @tab-height - 3 !important;
+            width: @tab-space !important;
             color: #888 !important;
+            border: 0 !important;
+            text-align: center !important;
+            border-radius: 0 !important;
+            opacity: 0;
 
-            transition: .2s;
+            transition: @tab-transition;
+
+            &:before {
+                display: inline-block !important;
+            }
+
+            &:hover {
+                color: @tab-color-primary !important ;
+            }
+        }
+
+        &:hover {
+            .close-icon {
+                opacity: 1;
+            }
         }
 
         &.modified {
@@ -29,20 +58,10 @@
             border-bottom-color: @tab-color-modified !important;
         }
 
+
         &.active {
-            border-bottom: 3px solid @tab-color-primary;
-            z-index: 1;
             color: @tab-color-primary;
-        }
-
-        &:hover .close-icon {
-            opacity: 1;
-        }
-
-        .title {
-            position: relative;
-            text-align: center;
-            padding: 0 5px;
+            border-bottom: 3px solid @tab-color-primary;
             z-index: 1;
         }
     }
