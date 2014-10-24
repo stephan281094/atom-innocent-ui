@@ -1,0 +1,11 @@
+{
+    "name": "atom-innocent-ui",
+    "theme": "ui",
+    "version": "0.0.1",
+    "description": "Minimalistic light theme for interface components",
+    "repository": "http://github.com/stephan281094/atom-innocent-ui.git",
+    "license": "MIT",
+    "engines": {
+        "atom": ">0.50.0"
+    }
+}

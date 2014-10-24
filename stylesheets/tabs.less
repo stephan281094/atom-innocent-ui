@@ -1,0 +1,49 @@
+@import "ui-variables";
+@tab-color-primary: #c00;
+@tab-color-modified: #d2691e;
+@tab-height: 30px;
+
+.tab-bar {
+    height: @tab-height;
+    background-color: #fefefe;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    .tab {
+        position: relative;
+        max-width: 160px;
+        height: @tab-height;
+        line-height: @tab-height;
+        color: #333;
+
+        transition: .2s;
+
+        .close-icon {
+            right: 0;
+            color: #888 !important;
+
+            transition: .2s;
+        }
+
+        &.modified {
+            color: @tab-color-modified !important;
+            border-bottom-color: @tab-color-modified !important;
+        }
+
+        &.active {
+            border-bottom: 3px solid @tab-color-primary;
+            z-index: 1;
+            color: @tab-color-primary;
+        }
+
+        &:hover .close-icon {
+            opacity: 1;
+        }
+
+        .title {
+            position: relative;
+            text-align: center;
+            padding: 0 5px;
+            z-index: 1;
+        }
+    }
+}
