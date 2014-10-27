@@ -6,7 +6,8 @@ A quick preview below:
 
 ## Installation
 * Clone this repository
-* Change directory into the folder
+* Change directory into the folder using the terminal
+* Make sure you installed the [Atom shell commands](https://github.com/atom/apm/blob/master/README.md)
 * Run the following command: `apm link`
 * Open Atom and go to settings
 * Select the Atom-Innocent UI theme
